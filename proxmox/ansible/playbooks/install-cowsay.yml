@@ -1,0 +1,12 @@
+- hosts: all
+  become: yes
+  
+  tasks:
+    - name: Install EPEL Repository
+      dnf:
+        name: epel-release
+        state: present
+    - name: Install cowsay package
+      dnf:
+        name: cowsay
+        state: present
